@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>zayats_rada_hw_3_tables</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Урок "Формы": теги и их атрибуты.</h1>
+</header>
+
+<h2>Расскажи немного о себе...</h2>
+
+<p>Попробуй создать аналогичную форму. Для целей демонстрации вполне подойдут и вымышленные.</p>
+
+<form action="form_processing.php" method="post">
+    <fieldset>
+        <legend>Коротко о себе</legend>
+
+        <p><label for="fname">Имя</label><input type="text" id="fname"></p>
+        <p><label for="lname">Фамилия</label><input type="text" id="lname"></p>
+        <p><label>Пол</label>
+            <input type="radio" name="gender" value="мужской">мужской
+            <input type="radio" name="gender" value="женский">женский</p>
+        <p><label for="Возвраст:">Возвраст:</label>
+            <input size="2" type="text" id="Возвраст:">лет</p>
+        <!--не могу понять как быть с закрывающим тегом формы, тут его не логично оставлять,
+        но валидатор по другому не пропускал-->
+    </fieldset>
+
+    <fieldset>
+        <legend>Подробнее о себе</legend>
+        <form method="post">
+            <label></label>
+            <p><input type="radio" name="gender">Молодой человек</p>
+            <p><input type="radio" name="gender">Девушка</p>
+
+            <label></label>
+            <p><input type="text" name="date-birth">Дата рождения</p>
+            <p><input type="text" name="status">Семейное положение</p>
+            <p><input type="text" name="social-status">Социальный ствтус</p>
+            <p><input type="text" name="place">Местожительство</p>
+
+            <p>Что вы обычно делпете на выходных:</p>
+
+            <p><input type="checkbox" name="sleeping">Сплю</p>
+            <p><input type="checkbox" name="wolking">Гуляю с друзьями</p>
+            <p><input type="checkbox" name="fishing">Хожу на рыбалку</p>
+            <p><input type="checkbox" name="playing">Играю в игры</p>
+
+            <p class="text-bold">Рассказать о формах в книге, посвященной HTML:</p>
+
+            <p><select size="3">
+                <option value="Site frequence">Site frequence:</option>
+                <option value="Site frequence">Site frequence:</option>
+                <option value="Site frequence">Site frequence:</option>
+            </select></p>
+
+            <p class="text-bold">Сколько книг вы прочитали за свою жизнь:</p>
+
+            <label></label>
+            <p><input type="radio" name="count">0-10</p>
+            <p><input type="radio" name="count2">11-20</p>
+            <p><input type="radio" name="count3">21-50</p>
+            <p><input type="radio" name="count4">50+</p>
+
+            <p class="text-bold">Ваши комментарии:</p>
+
+            <textarea></textarea></form>
+
+        <p><select size="3">
+            <option value="first-position">Первая позиция</option>
+            <option value="second-position">Вторая позиция</option>
+            <option value="third-position">Третья позиция</option>
+        </select></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>И в заключении</legend>
+
+        <input size="25" type="text" placeholder="Это поле было введено до вас">
+
+        <p class="text-bold">Email:</p>
+
+        <input size="25" type="Email" name="mail">
+
+        <p class="text-bold">Хотите подписаться на самую модную рассылку спама?</p>
+
+        <p><i>Выберете категории</i></p>
+
+        <p><input type="checkbox" name="equipment">Оборудование</p>
+        <p><input type="checkbox" name="how-to-cook">Как приготовить обеды</p>
+        <p><input type="checkbox" name="millioner">Заработай миллион за два дня!</p>
+
+        <p class="text-bold">На сколько сложная задача:</p>
+
+        <p><input type="radio" name="hell-no">Совсем нет</p>
+        <p><input type="radio" name="so-so">Так себе</p>
+        <p><input type="radio" name="barely">Еле справились</p>
+    </fieldset>
+
+    <input class="button" type="button" value="Отправить">
+
+</form>
+</body>
+</html>
